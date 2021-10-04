@@ -1,0 +1,18 @@
+Open this project: https://hub.binder.jovian.ai/user/rubanero14/api-git-162c4d8-9493572abe999_1-fl6cdkj5/notebooks/scraping-github-topics-repositories.ipynb
+Turorial source: https://www.youtube.com/watch?v=RKsLLG-bzEY
+
+request library python: https://docs.python-requests.org/en/latest (library for downloading web pages)
+beautiful soup documentation: https://www.crummy.com/software/BeautifulSoup/bs4/doc (tool for scraping information from saved html file)
+
+.strip() = removes any empty spaces in strings (from the beginning to the end in paragraphs)
+
+Steps:
+1. Pick a target website
+
+Use the requests library to download web pages
+2. !pip install requests, add '--upgrade --quite' if already installed before in Jupyter notebook'
+3. import requests
+4. assign target site url to a variable, ie target_url = 'https://github.com/topics'
+5. Check if target site is connected to our notebook with simple code 'response = requests.get(target_url)', if return status 200-299, means success
+6. use assigned response variable to display the contents of target url that we parse, using code 'response.text' or simply check the length by using 'len(response.text)'
+7. Assign contents of response.text to a variable called page_contents, 'page_contents= response.text'
